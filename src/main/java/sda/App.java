@@ -1,13 +1,22 @@
 package sda;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import sda.model.Hotel;
+import sda.service.HotelService;
+
+public class App {
+
+    public static void main( String[] args ) {
+
+        Hotel sdaHotel = new Hotel();
+        HotelService sdaHotelService = new HotelService(sdaHotel);
+
+        System.out.println("All rooms: ");
+        System.out.println(sdaHotelService.getAllRooms());
+        System.out.println("Available rooms: ");
+        System.out.println(sdaHotelService.getAvailableRoom());
+
+
+
+
     }
 }
